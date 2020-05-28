@@ -31,11 +31,11 @@ function CharacterPage() {
 
   const handlePagination = ({currentTarget}) => { 
     const event = currentTarget.className; 
-
     setPage((state) => {
       return event ==="next" ? state + 1 : state -1 ;
     });
     document.getElementById("searcher").scrollIntoView({ behavior: "smooth" });
+    setQuery('');
   };
 
   return (
