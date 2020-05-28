@@ -1,0 +1,32 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin: 4vh;
+}
+
+.pagination button {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 3vh;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    
+}
+
+.pagination .previous{
+    width: 10vh;
+    color: white;
+    background-color: rgb(28, 30, 36);
+    transition: all .8s ease;
+}
+
+.pagination .next {
+    background-color: rgb(143, 189, 241);
+    width: 20vh;
+    height: 6vh; 
+}
+
+.pagination .next:hover {
+    background-color: rgb(159, 191, 228);
+}

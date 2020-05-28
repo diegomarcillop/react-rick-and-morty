@@ -1,37 +1,51 @@
-import React, { useState, useEffect }  from 'react';
+import React, { useState, useEffect } from "react";
 import api from "common/api";
-import CharacterList from 'components/Character/CharacterList/CharacterList';
-import Searcher from 'components/Searcher/Searcher';
-import { search } from 'services/fuse';
+import CharacterList from "components/Character/CharacterList/CharacterList";
+import Searcher from "components/Searcher/Searcher";
+import { search } from "services/fuse";
+import Pagination from "components/Pagination/Pagination";
 
-function CharacterPage(){
+function CharacterPage() {
+  const [query, setQuery] = useState("");
+  const [character, setCharacter] = useState(null);
+  const [result, setResult] = useState(null);
+  const [page, setPage] = useState(1);
+  useEffect(() => {
+    console.log(page);
+    apiREST();
+  }, [page]);
 
-    const [query, setQuery] = useState('');
-    const [character, setCharacter] = useState(null);
-    const [result, setResult]  = useState(null);
-    
-    useEffect(() => {
-      apiREST();
-    }, []);
-  
-    const apiREST = async () => {
-      const { results } = await api.get("character/");
-       setCharacter(results);
-    }; 
+  const apiREST = async () => {
+    const { results } = await api.get("character", page);
+    setCharacter(results);
+    return result;
+  };
 
-    const onSearch = ({ currentTarget}) => {
-        setQuery(currentTarget.value);
-        let result = search(character, ["name", "species"], query);
-        result = result.map( character => character.item);
-        console.log(result);
-        setResult(result);
-    } 
+  const onSearch = ({ currentTarget }) => {
+    setQuery(currentTarget.value);
+    let result = search(character, ["name", "species"], query);
+    result = result.map((character) => character.item);
+    setResult(result);
+    return result;
+  };
 
-    return(
-        <>
-        <Searcher onSearch={onSearch} query={query}/>
-        <CharacterList character={result===null || query.length === 0 ?  character: result}/>
-        </>
-    )
+  const handlePagination = ({currentTarget}) => { 
+    const event = currentTarget.className; 
+
+    setPage((state) => {
+      return event ==="next" ? state + 1 : state -1 ;
+    });
+    document.getElementById("searcher").scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <>
+      <Searcher onSearch={onSearch} query={query} />
+      <CharacterList
+        character={result === null || query.length === 0 ? character : result}
+      />
+      <Pagination handlePagination={handlePagination}  page={page}/>
+    </>
+  );
 }
 export default CharacterPage;

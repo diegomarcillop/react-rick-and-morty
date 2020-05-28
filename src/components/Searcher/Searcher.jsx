@@ -3,7 +3,7 @@ import "./Searcher.css";
 
 function Searcher({ onSearch, query }) {
   return ( 
-      <div className="searcher">
+      <div className="searcher" id="searcher">
         <input volue={query} onChange={onSearch} spellCheck="false" />
         <button>
           <i className="fas fa-search"></i>
