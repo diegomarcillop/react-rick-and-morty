@@ -1,13 +1,13 @@
 .searcher{
-    margin: 6vh;
+    margin: 6vh 1vh 6vh 1vh;
     display: flex;
     justify-content: center;
     font-family: 'Lato', sans-serif;
 }
 
 .searcher input {
-    width: 60vh;
-    height: 7vh;
+    width: auto;
+     height: 6vh;
     border-radius: 20vh;
     border: none;
     outline: 0;
@@ -18,14 +18,14 @@
 }
 
 .searcher button{
-    width: 7vh;
-    height: auto;
+    width: 6vh;
+    height: 6vh;
     border-radius: 100%;
     border: none;
     outline: 0;
     cursor: pointer;
     color: white;
-    margin-left: 1vh;
+    margin-left: 3px;
     background-color: #446f7c;
     transition: all .8s ease;
 }
