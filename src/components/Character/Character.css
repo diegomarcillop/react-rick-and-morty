@@ -1,0 +1,62 @@
+.card {
+    font-family: 'Lato', sans-serif;
+    width: 29vh;
+    height: 36vh;
+    background-color: #13262c;
+    padding: 0px 20px 20px 20px;
+    margin-bottom: 6vh;
+    border-radius: 10px ;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align:center;
+    align-items: center; 
+    box-shadow: 0px 14px 39px -12px rgba(0,0,0,1);
+    transition: all .6s ease; 
+}
+
+.card h1 {
+    margin:0;
+    font-weight: 900;
+    font-size: 3.8vh;
+
+}
+
+.card h2 {
+    padding-top: 1vh;
+    font-weight: 300;
+    font-size: 3vh;
+
+}
+
+.card p{
+    font-size: 2vh;
+}
+
+.card img {
+    width: 20vh;
+    border-radius: 100%;
+    transform:translateY(-20px); 
+}
+
+.card:hover{
+    background-color: #203e47;
+}
+
+.card i {
+    font-size: 2vh;
+}
+
+.card .dead {
+    color: rgb(194, 91, 91);
+}
+
+.card .alive {
+    color: rgb(103, 238, 121);
+}
+
+.card .unknown{
+    color: rgb(59, 59, 59);
+}
+

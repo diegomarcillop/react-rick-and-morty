@@ -1,0 +1,39 @@
+.searcher{
+    margin: 6vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.searcher input {
+    width: 60vh;
+    height: 7vh;
+    border-radius: 20vh;
+    border: none;
+    outline: 0;
+    background-color: #a3c9d6;
+    padding-left: 2vh;
+    font-size: 3vh;
+    font-weight: 300;
+}
+
+.searcher button{
+    width: 7vh;
+    height: auto;
+    border-radius: 100%;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    color: white;
+    margin-left: 1vh;
+    background-color: #446f7c;
+    transition: all .8s ease;
+}
+
+.searcher button:hover {
+    background-color: #2d515c;
+
+}
+.searcher button i{
+    font-size: 3vh;
+}
