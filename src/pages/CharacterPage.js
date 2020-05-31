@@ -34,13 +34,14 @@ function CharacterPage() {
     setPage((state) => {
       return event ==="next" ? state + 1 : state -1 ;
     });
-    document.getElementById("searcher").scrollIntoView({ behavior: "smooth" });
+    document.getElementById("app").scrollIntoView({ behavior: "smooth" });
     setQuery('');
   };
 
   return (
     <>
       <Searcher onSearch={onSearch} query={query} />
+      <h2 className="title_2">Characters</h2>
       <CharacterList
         character={result === null || query.length === 0 ? character : result}
       />

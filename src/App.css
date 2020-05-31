@@ -8,6 +8,25 @@
     margin-right: 20vh;
 }
 
+.title {
+    margin-top: 6vh;
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 16vh;
+    text-align: center;
+    color: rgb(156, 221, 247);
+    text-shadow: 9px 2px 60px rgb(200, 255, 175); 
+    cursor: pointer;
+}
+
+.title_2{
+    color: white;
+    font-size: 5vh;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin: 6vh;
+    font-weight: 900;
+}
+
 body{
     background-color: rgb(10, 33, 37);
 }
@@ -17,4 +36,8 @@ body{
         margin-left: 0px;
         margin-right: 0px;
     } 
+    .title {
+        font-size: 10vh;
+
+    }
 }
