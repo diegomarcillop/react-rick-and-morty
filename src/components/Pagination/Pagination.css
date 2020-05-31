@@ -17,16 +17,17 @@
 .pagination .previous{
     width: 10vh;
     color: white;
-    background-color: rgb(28, 30, 36);
+    background-color: rgb(44, 49, 65);
     transition: all .8s ease;
 }
 
 .pagination .next {
-    background-color: rgb(143, 189, 241);
+    background-color: rgb(166, 214, 218);
     width: 20vh;
     height: 6vh; 
 }
 
 .pagination .next:hover {
-    background-color: rgb(159, 191, 228);
+    background-color: rgb(168, 222, 226);
+
 }
