@@ -5,3 +5,8 @@
     justify-content: space-around;
     align-items: flex-end;
 }
+
+.message{
+    text-align: center;
+    color: white;
+}

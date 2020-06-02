@@ -13,7 +13,7 @@ function CharacterList({character}) {
       </div>
     );
   } else {
-    return <p>No hay</p>;
+    return <p className="message">No se cargaron los datos</p>;
   }
 }
 
