@@ -11,13 +11,17 @@
     cursor: pointer;
     border: none;
     outline: none;
-    
 }
 
+.pagination .nextButton{
+    border-radius: 5px;
+}
 .pagination .previous{
-    width: 10vh;
+    width: 8vh;
     color: white;
     background-color: rgb(44, 49, 65);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     transition: all .8s ease;
 }
 
