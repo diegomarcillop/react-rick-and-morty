@@ -15,7 +15,7 @@ export const  CardCharacter = ({ data }) => {
             status === 'Dead' ? 'dead' : status === 'Alive' ? 'alive' : ''
           }`}
         />
-        {" "}{status} - {species}
+        {" "}{species}
       </h2>
       <p className='card-character__origin'>{origin.name}</p>
     </div>

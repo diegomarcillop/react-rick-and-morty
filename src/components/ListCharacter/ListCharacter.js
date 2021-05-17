@@ -10,7 +10,7 @@ export const ListCharacter = ({ character, handlePagination }) => {
         dataLength={character.length}
         next={handlePagination}
         hasMore={true}
-        loader={<h4 className="loading-scroll">Cargando ...</h4>}
+        loader={<h4 className="loading-scroll">Loading ...</h4>}
         className="infinite-scroll"
       >
         <div className='character_list'>

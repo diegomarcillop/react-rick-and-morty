@@ -1,5 +1,5 @@
 .divider-title {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: row;
   //grid-template-columns: auto auto;
@@ -16,5 +16,12 @@
     margin-left: 2vh;
     height: 0.3vh;
     background-color: #D2E054;
+  }
+  @media (max-width: $device-mobile) {
+    width: auto;
+    margin: 1vh;
+    &__title {
+      font-size: 3.5vh;
+    }
   }
 }

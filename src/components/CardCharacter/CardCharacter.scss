@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 40vh;
+  height: 35vh;
   background-color: $color-primary;
   padding: 0px 20px 20px 20px;
   border-radius: 1vh;
@@ -29,9 +29,8 @@
     font-size: 2.2vh;
     font-weight: 300;
     text-align: center;
+    opacity: 0.8;
     color: white;
-    padding-top: 1vh;
-    margin-bottom: 1vh;
   }
   &__origin {
     font-family: "Poppins", sans-serif;
@@ -40,7 +39,7 @@
     color: white;
   }
   &__image {
-    width: 20vh;
+    width: 18vh;
     border-radius: 100%;
     transform: translateY(-20px);
   }
@@ -57,6 +56,18 @@
   
   .unknown {
     color: $color-default;
+  }
+  @media (max-width: $device-mobile) {
+    &__name {
+      font-size: 3.5vh;
+      line-height: 3.5vh;
+    }
+    &__status {
+      font-size: 3vh;
+    }
+    &__origin {
+      font-size: 3vh;
+    }
   }
 } 
 
