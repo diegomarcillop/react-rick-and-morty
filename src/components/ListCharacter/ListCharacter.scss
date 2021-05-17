@@ -1,0 +1,23 @@
+.character_list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, [col] 28vh);
+  column-gap: 4vh;  
+  row-gap: 4vh;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: flex-end;
+  margin-top: 6vh;
+  @media (max-width: $device-mobile) {
+    grid-template-columns: 70%;
+  }
+
+}
+
+.message {
+  font-family: "Poppins", sans-serif;
+  font-size: 3vh;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+}

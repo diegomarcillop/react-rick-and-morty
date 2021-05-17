@@ -1,0 +1,18 @@
+.divider-title {
+  display: flex;
+  flex-direction: row;
+  //grid-template-columns: auto auto;
+  align-items: center;
+  &__title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 5vh;
+    color: white;
+  }
+  &__divider {
+    width: 100%;
+    margin-left: 2vh;
+    height: 0.3vh;
+    background-color: #D2E054;
+  }
+}

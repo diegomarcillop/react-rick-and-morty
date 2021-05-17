@@ -1,12 +1,12 @@
 import React from "react";
-import "./App.css";
-import CharacterPage from "pages/CharacterPage";
- 
+
+import "./sass/main.scss";
+import { Home } from "scenes/Home/Home";
+
 function App() {
   return (
     <div className="App" id="app">
-      <h1 className="title">Rick and Morty</h1>
-       <CharacterPage />
+      <Home />
     </div>
   );
 }

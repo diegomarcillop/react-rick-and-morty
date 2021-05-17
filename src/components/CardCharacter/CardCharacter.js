@@ -1,7 +1,8 @@
 import React from 'react';
-import './Character.css';
 
-function Character({ data }) {
+import './CardCharacter';
+
+export const  CardCharacter = ({ data }) => {
   const { name, image, species, status, origin } = data;
 
   return (
@@ -19,6 +20,4 @@ function Character({ data }) {
       <p>{origin.name}</p>
     </div>
   );
-}
-
-export default Character;
+};

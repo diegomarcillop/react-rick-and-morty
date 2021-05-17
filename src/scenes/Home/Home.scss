@@ -1,0 +1,37 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  width: 150vh;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  &__image-name {
+    width: 60vh;
+    object-fit: cover;
+    align-self: center;
+    margin-bottom: 2vh;
+  }
+  &__section-list {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    margin-top: 8vh;
+    background-color: ble;
+    &__title{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 5vh;
+      color: white;
+    }
+  }
+  @media (max-width: $device-mobile) {
+    &__image-name {
+      width: 80%;
+    }
+    &__section-list {
+      padding: 0px 2vh;
+    }
+  }
+}
