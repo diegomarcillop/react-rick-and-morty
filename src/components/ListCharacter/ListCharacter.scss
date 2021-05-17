@@ -7,11 +7,17 @@
   justify-content: space-around;
   justify-items: center;
   align-items: flex-end;
-  margin-top: 6vh;
+  padding-top: 6vh;
+  overflow-x: hidden;
   @media (max-width: $device-mobile) {
     grid-template-columns: 70%;
   }
+}
 
+.infinite-scroll{
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .message {

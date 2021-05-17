@@ -11,6 +11,7 @@ export const ListCharacter = ({ character, handlePagination }) => {
         next={handlePagination}
         hasMore={true}
         loader={<h4 className="loading-scroll">Cargando ...</h4>}
+        className="infinite-scroll"
       >
         <div className='character_list'>
           {character?.map((data, index) => {

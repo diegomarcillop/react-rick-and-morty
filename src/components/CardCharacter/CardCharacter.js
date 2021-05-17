@@ -6,18 +6,18 @@ export const  CardCharacter = ({ data }) => {
   const { name, image, species, status, origin } = data;
 
   return (
-    <div className='card'>
-      <img src={image} alt='img-character' />
-      <h1>{name}</h1>
-      <h2>
+    <div className='card-character'>
+      <img className='card-character__image' src={image} alt='img-character' />
+      <h1 className='card-character__name'>{name}</h1>
+      <h2 className='card-character__status'>
         <i
           className={`fas fa-circle ${
-            status === 'Dead' ? 'dead' : status === 'Alive' ? 'alive' : 'ssss'
+            status === 'Dead' ? 'dead' : status === 'Alive' ? 'alive' : ''
           }`}
         />
-        {status} - {species}
+        {" "}{status} - {species}
       </h2>
-      <p>{origin.name}</p>
+      <p className='card-character__origin'>{origin.name}</p>
     </div>
   );
 };
