@@ -9,27 +9,30 @@ import { DividerTitle } from 'components/DividerTitle/DividerTitle';
 
 export const Home = () => {
   const [query, setQuery] = useState("");
-  const [character, setCharacter] = useState([]);
+  const [characters, setCharacters] = useState([]);
   const [result, setResult] = useState(null);
   const [page, setPage] = useState(1);
 
   useEffect(() => {
     const apiRest = async () => {
-      const { results } = await api.get('character', page);
-      let newCharacters = character.concat(results);
-      setCharacter(newCharacters);
-      return result;
+      const { results } = await api.get('character', { page });
+
+      let newCharacters = characters.concat(results);
+      setCharacters(newCharacters);
     };
-
     apiRest();
-  }, [page, result]);
+  }, [page]);
 
-  const onSearch = ({currentTarget}) => {
-    let result = search(character, ['name', 'species'], query);
-    result = result.map((character) => character.item);
+  useEffect(() => {
+    handleSearch();
+  }, [query]);
 
-    setResult(result.length === 0 ? null : result);
-    setQuery(currentTarget.value);
+  const handleSearch = async () => {
+
+    let newResult = search(characters, ['name', 'species'], query);
+    newResult = newResult.map((character) => character.item);
+
+    setResult(newResult.length === 0 ? null : newResult);
   };
 
   const handlePagination = () => {
@@ -39,11 +42,11 @@ export const Home = () => {
   return (
     <div className="home scroll-custom">
       <img className="home__image-name" src={NameImage} />
-      <Searcher onSearch={(e) => onSearch(e)} valueSearch={query} />
+      <Searcher onSearch={({currentTarget}) => setQuery(currentTarget.value)} valueSearch={query} />
       <div className="home__section-list">
-        <DividerTitle title="Character" />
+        <DividerTitle title="List of characters" />
         <ListCharacter
-          character={result || character}
+          character={result || characters}
           handlePagination={handlePagination}
         />
       </div>

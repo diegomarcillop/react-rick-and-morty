@@ -1,16 +1,22 @@
-import Axios from "axios";
-
 const apiURL = process.env.REACT_APP_API_URL;
 
 class Api {
-    get(url, page) {
-        url = `${apiURL}/${url}/?page=${page}`;
-        console.log(url);
-         return Axios.get(url)
-         .then(async (res) => {
-               return await res.data;
-         }).catch(err => err)
+  async get(url, params) {
+    url = new URL(`${apiURL}${url}`);
 
+    if (params) {
+      Object.keys(params).forEach((key) =>
+        url.searchParams.append(key, params[key]),
+      );
     }
+    return fetch(url, {
+      method: 'GET',
+      headers: {},
+    })
+    .then(async (response) => {
+      return await response.json();
+    })
+    .catch((err) => err);
+  }
 }
 export default new Api();
