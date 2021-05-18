@@ -15,10 +15,11 @@ export const Home = () => {
 
   useEffect(() => {
     const apiRest = async () => {
-      const { results } = await api.get('character', { page });
-
-      let newCharacters = characters.concat(results);
-      setCharacters(newCharacters);
+      const { results  } = await api.get('character', { page });
+      if (results){  
+        let newCharacters = characters.concat(results);
+        setCharacters(newCharacters);
+      }
     };
     apiRest();
   }, [page]);
